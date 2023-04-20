@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+</style>
+<body>
+<h1>Welcome to the home page</h1><br><br><br>
+
+{{ member.firstname }}{{ member.lastname }}<br><br>
+<a href="{% url 'login' %}"  class="btn btn-warning">Logout</a>
+
+</body>
+</html>
+{% endblock %}
